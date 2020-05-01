@@ -1,0 +1,33 @@
+table{
+    width:75%
+}
+table.center {
+    margin-left:auto; 
+    margin-right:auto;
+}
+.heading-color{
+    color: #A449EA;
+}
+.table-bordered td, .table-bordered th {
+    border: 1px solid burlywood;
+  }
+.button-style{
+    transform: rotate(180deg);
+    color: darkmagenta;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-bottom: 2px;
+}
+.error-banner{
+    font-size: large;
+    color: red;
+    text-align: center
+}
+.main-heading{
+    font-weight: bolder;
+    text-align: center;
+    color:darkmagenta;
+}
+.cursor-events{
+    cursor: pointer;
+}

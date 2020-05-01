@@ -1,0 +1,39 @@
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>News Details</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="newsForm" (ngSubmit)="save(newsForm)">
+        <div class="form-div">
+            <mat-form-field  class="field-container">
+            <input matInput placeholder="News Title" formControlName="news_title" required maxlength="30">
+            <mat-error *ngIf="newsForm.get('news_title').invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="field-container" >
+            <input matInput placeholder="News Description" formControlName="news_description" type="text" required maxlength="50">
+            <mat-error *ngIf="newsForm.get('news_description').invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field  class="field-container">
+            <input matInput placeholder="News summary" formControlName="news_summary" required maxlength="70">
+            <mat-error *ngIf="newsForm.get('news_summary').invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="field-container" >
+            <input matInput placeholder="Full News" formControlName="full_news" type="text" required maxlength="100">
+            <mat-error *ngIf="newsForm.get('full_news').invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="field-container" >
+            <input matInput placeholder="Area related to News" formControlName="news_area" type="text" required maxlength="20">
+            <mat-error *ngIf="newsForm.get('news_area').invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+            <mat-card-actions>
+                    <button type="submit" mat-raised-button color="accent" [disabled]="!newsForm.valid">Add News Details</button>
+                    <button type="button" mat-raised-button color="accent" (click)="resetForm()" [disabled]="!newsForm.valid">Reset</button>
+            </mat-card-actions>
+        </div>
+    </form>
+    </mat-card-content>
+</mat-card>

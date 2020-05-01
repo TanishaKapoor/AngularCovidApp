@@ -1,0 +1,32 @@
+<div class="main-heading">
+   DISTRICT DETAILS
+</div>
+<div (click)="goBack()">
+  <svg class="button-style"  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+  <span class="cursor-events">Go Back </span>
+</div>
+<div class="table-responsive"  *ngIf="districtData">
+    <table class="table-bordered center">
+      <thead>
+        <tr  class="heading-color">
+          <th>District</th>
+          <th>Confirmed Cases</th>
+          <th>Active Cases</th>
+          <th>Recovered Cases</th>
+          <th>Death Cases</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of districtData | keyvalue">
+         <td>{{user.key}}</td>
+          <td>{{user.value.confirmed}}</td>
+          <td>{{user.value.active}}</td>
+          <td>{{user.value.recovered}}</td>
+          <td>{{user.value.deceased}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="error-banner" *ngIf="!districtsBlock">
+    YOU ARE SAFE AS OF NOW...!!!
+  </div>

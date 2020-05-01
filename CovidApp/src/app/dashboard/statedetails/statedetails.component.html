@@ -1,0 +1,23 @@
+<div class="main-heading">
+  STATE DETAILS
+</div>
+<table class="table-bordered center" *ngIf="stateValues && stateValues.length">
+    <thead>
+      <tr class="heading-color">
+        <th>State Names</th>
+        <th>Confirmed Cases</th>
+        <th>Active Cases</th>
+        <th>Recovered Cases</th>
+        <th>Deaths Cases</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="card-container" *ngFor="let user of stateValues">
+        <td ><a class="card" [routerLink]="['/dashboard/viewState', user.statecode]">{{ user.state}}</a></td>
+        <td>{{user.confirmed}}</td>
+        <td>{{user.active }}</td>
+        <td>{{user.recovered}}</td>
+        <td>{{user.deaths}}</td>
+       </tr>
+    </tbody>
+</table>

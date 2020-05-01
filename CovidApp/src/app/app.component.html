@@ -1,0 +1,63 @@
+
+<div class="toolbar" role="banner">
+  <img title="Corona"
+    width="40"
+    alt="Corona"
+    src="assets/images/icons8-cute-monster-100.png"
+  />
+  <span>WELCOME {{username | uppercase}}</span>
+    <div class="spacer"></div>
+    <a class="marginright anchor-color" routerLinkActive='active' [routerLink]="['/news-details']" [class.hidden]="toggleTitle=='LOGOUT'?false:true">
+      ADD NEWS DETAIL
+    </a>
+    <a><span class="marginright" (click)="redirect()">
+      {{toggleTitle}}
+    </span></a>
+ 
+</div>
+
+<div class="content" role="main">
+
+  <h2 class="heading-color">STAY HOME.STAY SAFE.</h2>
+
+  <div class="card-container">
+    <a class="card" routerLinkActive='active' [routerLink]="['']" [class.disabled]="disabled">
+      <img class="image-size" title="Corona"
+      alt="Corona"
+      src="assets/images/state.jpg"
+    />
+      <span>DASHBOARD</span>
+
+      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>    </a>
+
+    <a class="card" routerLinkActive='active' [routerLink]="['/latest-news']">
+      <img class="image-size" title="Corona"
+      alt="Corona"
+        src="assets/images/news.jpg"
+      />
+      <span>LATEST NEWS</span>
+
+      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+    </a>
+
+    <a class="card"  routerLinkActive='active' [routerLink]="['/precautions']">
+      <img class="image-size" title="Corona"
+      alt="Corona"
+      src="assets/images/precaution.jpg"
+      />
+      <span>PRECAUTIONS</span>
+
+      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+    </a>
+
+  </div>
+  <img class="background-pic" viewBox="0 0 2611.084 485.677" title="Corona"
+      alt="Corona"
+      src="assets/images/coronavirus.jpg"
+  />
+
+</div>
+
+
+
+<router-outlet></router-outlet>

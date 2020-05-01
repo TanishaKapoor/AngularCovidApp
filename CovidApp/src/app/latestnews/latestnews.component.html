@@ -1,0 +1,28 @@
+  <div class="card-container" *ngIf="latestnews">
+    <div *ngFor="let news of latestnews">
+    <div class="card">
+      <div>
+          <div>
+            <span class="heading-color">News Title: </span>
+            <span>{{news.news_title}}</span>
+          </div>
+          <div>
+            <span class="heading-color">News Description: </span>
+            <span>{{news.news_description}}</span>
+          </div>
+          <div>
+            <span class="heading-color">News Summary: </span>
+            <span>{{news.news_summary}}</span>
+          </div>
+          <div>
+            <span class="heading-color">Full News: </span>
+            <span>{{news.full_news}}</span>
+          </div>
+          <div>
+            <span class="heading-color">News Area: </span>
+            <span>{{news.news_area}}</span>
+          </div>
+          </div>
+    </div>
+    </div>
+  </div>
